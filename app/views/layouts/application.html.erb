@@ -1,31 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "Crow Dev Portfolio" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html class="scroll-smooth">
 
-    <%= yield :head %>
+<head>
+  <title><%= content_for(:title) || "Crow Dev Portfolio" %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+  <%= yield :head %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+  <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+  <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <%# Includes all stylesheet files in app/assets/stylesheets %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-dark-900 text-gray-900 dark:text-white antialiased" data-controller="theme">
+  <%# Add padding bottom for devices with home indicator (like iPhone X and newer) %>
+  <div class="min-h-screen pb-safe">
+    <%# Header with navigation, language and theme switcher %>
+    <header class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md z-50 border-b border-gray-200/50 dark:border-gray-800/50">
+      <nav class="container mx-auto px-4 md:px-6 py-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <%# Logo/Name %>
+          <div class="text-2xl font-bold">
+            <%= link_to "Crow Dev", root_path, class: "bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity" %>
+          </div>
+
+          <%# Main Navigation %>
+          <div class="flex items-center gap-6">
+            <%# Section Links %>
+            <div class="hidden md:flex items-center gap-6">
+              <% %w[about projects skills experience education contact].each do |section| %>
+              <a href="#<%= section %>" class="nav-link text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-500">
+                <%= t("navigation.#{section}") %>
+              </a>
+              <% end %>
+            </div>
+
+            <%# Language Switcher %>
+            <div class="flex gap-3 text-sm font-medium">
+              <% I18n.available_locales.each do |locale| %>
+              <%= link_to switch_locale_path(locale: locale), 
+                    class: "nav-link #{I18n.locale == locale ? 'active' : ''}" do %>
+              <span class="uppercase"><%= locale %></span>
+              <% end %>
+              <% end %>
+            </div>
+
+            <%# Theme Toggle %>
+            <button data-action="theme#toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-800 transition-colors duration-200">
+              <span class="dark:hidden">🌙</span>
+              <span class="hidden dark:inline">☀️</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
       <%= yield %>
     </main>
-  </body>
+  </div>
+</body>
+
 </html>

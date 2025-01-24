@@ -1,0 +1,60 @@
+<div class="space-y-8">
+  <%# Header %>
+  <div class="space-y-4">
+    <h2 class="section-title"><%= t('about.title') %></h2>
+    <div class="flex flex-col md:flex-row gap-8 items-center">
+      <%# Profile Image %>
+      <div class="w-48 h-48 rounded-full overflow-hidden flex items-center justify-center text-white text-4xl font-bold">
+        <%# Replace this with an actual image when available %>
+        <%= image_tag "profile_circle.png", class: "w-full h-full object-cover", alt: t('about.name') rescue "CR" %>
+      </div>
+
+      <%# Basic Info %>
+      <div class="space-y-2 text-center md:text-left">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+          <%= t('about.name') %>
+        </h1>
+        <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">
+          <%= t('about.role') %>
+        </p>
+        <p class="text-gray-600 dark:text-gray-400">
+          <%= t('about.education') %>
+        </p>
+        <p class="text-gray-500 dark:text-gray-500 flex items-center justify-center md:justify-start gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+          </svg>
+          <%= t('about.location') %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <%# Description %>
+  <div class="card">
+    <div class="prose dark:prose-invert max-w-none">
+      <% t('about.description').split("\n\n").each do |paragraph| %>
+      <p class="text-gray-600 dark:text-gray-300"><%= paragraph %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Interests %>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <% t('about.interests').each do |interest| %>
+    <div class="card group hover:border-primary-500 transition-colors">
+      <div class="flex items-start gap-4">
+        <span class="text-2xl"><%= interest[:icon] %></span>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+            <%= interest[:title] %>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            <%= interest[:description] %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

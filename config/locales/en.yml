@@ -28,4 +28,239 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  navigation:
+    about: "About Me"
+    projects: "Projects"
+    skills: "Skills"
+    experience: "Experience"
+    education: "Education"
+    contact: "Contact"
+
+  about:
+    title: "About Me"
+    name: "Cristóbal Rojas Brito"
+    role: "Software Engineer II @ Buk | Campus Leader @ Notion"
+    education: "Computer Science Engineering @ PUC"
+    location: "Santiago Metropolitan Area"
+    description: |
+      Hello! 👋 I'm passionate about programming in Ruby and Rails ❤️
+
+      While I'm primarily a backend developer, I'm always eager to learn frontend technologies, especially React. I'm a gaming enthusiast gradually transitioning from software development to game development.
+
+      Coming soon: digital nomad ✈️
+
+      One of my greatest passions is teaching, particularly mathematics, and especially when it comes to Calculus 📚
+    interests:
+      - title: "Backend Development"
+        icon: "💻"
+        description: "Specialized in Ruby on Rails development"
+      - title: "Teaching"
+        icon: "👨‍🏫"
+        description: "Passionate about sharing knowledge and helping others learn"
+      - title: "Gaming"
+        icon: "🎮"
+        description: "Enthusiast and aspiring game developer"
+      - title: "Mathematics"
+        icon: "📐"
+        description: "Love teaching and exploring mathematical concepts"
+
+  projects:
+    title: "Projects"
+    categories:
+      professional:
+        title: "Professional Projects @ Buk"
+        description: "Key projects and achievements in my current role"
+        projects:
+          - name: "Translatable Building Block"
+            description: "Designed and implemented a new building block that extends forms to support user-defined translations, including backend architecture and design patterns."
+            tags: ["Ruby on Rails", "Architecture", "Design Patterns"]
+            icon: "🌐"
+
+          - name: "Zendesk Integration"
+            description: "Implemented a new Zendesk bubble from scratch, including internal API client development, JWT authentication, and responsive design."
+            tags: ["API Integration", "JWT", "Frontend", "Backend"]
+            icon: "💬"
+
+          - name: "Developer Tools"
+            description: "Created deployment tools to improve developer experience and workflow efficiency."
+            tags: ["DevOps", "Automation", "DX"]
+            icon: "🛠️"
+
+          - name: "Sendgrid Integration"
+            description: "Implemented features using the Sendgrid API for improved email functionality."
+            tags: ["API Integration", "Email", "Backend"]
+            icon: "📧"
+
+      personal:
+        title: "Personal & University Projects"
+        description: "Projects I've worked on to learn and grow"
+        projects:
+          - name: "Portfolio Website"
+            description: "This website, built with Ruby on Rails and modern web technologies."
+            tags: ["Ruby on Rails", "Tailwind CSS", "Hotwire"]
+            icon: "🌟"
+            link: "https://github.com/username/portfolio"
+
+          - name: "Zmartboard Backend"
+            description: "Contributed to the backend team, improving and adding new features to this large-scale Rails application."
+            tags: ["Ruby on Rails", "Backend", "Team Collaboration"]
+            icon: "📊"
+
+          - name: "Web Development Project"
+            description: "University project using vanilla HTML, CSS, and JS for frontend with Node.js backend."
+            tags: ["Node.js", "JavaScript", "HTML/CSS"]
+            icon: "💻"
+
+          - name: "Database Projects"
+            description: "Experience with both SQL (PostgreSQL) and NoSQL (MongoDB) databases, with a focus on relational databases."
+            tags: ["PostgreSQL", "MongoDB", "Database Design"]
+            icon: "🗄️"
+
+  skills:
+    title: "Skills"
+    categories:
+      soft_skills:
+        title: "Soft Skills"
+        skills:
+          - name: "Patient"
+            description: "Ability to remain calm and work methodically"
+            icon: "🧘‍♂️"
+          - name: "Team Player"
+            description: "Strong collaboration and communication skills"
+            icon: "🤝"
+          - name: "Creative"
+            description: "Innovative problem-solving approach"
+            icon: "🎨"
+          - name: "Proactive"
+            description: "Self-motivated and takes initiative"
+            icon: "🚀"
+          - name: "Adaptable"
+            description: "Quick to learn and adjust to new situations"
+            icon: "🔄"
+
+      programming:
+        title: "Programming Languages"
+        skills:
+          - name: "Python"
+            level: 90
+            icon: "🐍"
+          - name: "Ruby"
+            level: 95
+            icon: "💎"
+          - name: "JavaScript"
+            level: 85
+            icon: "🟨"
+          - name: "C"
+            level: 80
+            icon: "⚡"
+
+      frameworks:
+        title: "Frameworks"
+        skills:
+          - name: "Django"
+            level: 85
+            icon: "🎯"
+          - name: "Ruby on Rails"
+            level: 95
+            icon: "🛤️"
+          - name: "Node.js"
+            level: 80
+            icon: "📦"
+
+      languages:
+        title: "Languages"
+        skills:
+          - name: "Spanish"
+            level: "Native"
+            icon: "🇪🇸"
+          - name: "English"
+            level: "Advanced (C1 CEFR Listening & Reading)"
+            icon: "🇺🇸"
+
+  experience:
+    title: "Professional Experience"
+    current: "Present"
+    roles:
+      notion:
+        company: "Notion"
+        title: "Campus Leader"
+        period: "September 2024 - Present"
+        location: "Santiago Metropolitan Region, Chile"
+        description: "I lead workshops and build a supportive community, helping students master Notion. My role includes facilitating training sessions, creating resources, and providing one-on-one support to enhance productivity and organization on campus."
+
+      buk:
+        company: "Buk"
+        roles:
+          - title: "Semi Senior Software Engineer"
+            period: "July 2024 - Present"
+            location: "Santiago Metropolitan Region, Chile"
+            description: "Semi Senior (Level 2) Software Engineer in the Platform team, mainly responsible for maintaining and improving the developer experience and the core pillars of Buk's application."
+
+          - title: "Software Engineer"
+            period: "March 2023 - July 2024"
+            location: "Santiago Metropolitan Region, Chile"
+            description: "Working on the Framework team, developing tools and solutions for Buk's developers."
+
+          - title: "Professional Intern"
+            period: "January 2023 - March 2023"
+            location: "Santiago Metropolitan Region, Chile"
+            description: "Development intern at Buk."
+
+      puc:
+        company: "Pontificia Universidad Católica de Chile"
+        roles:
+          - title: "Head Teaching Assistant - Automata Theory"
+            period: "July 2024 - Present"
+            location: "Santiago, Chile"
+            description: "Course coordinator for PUC's Automata Theory, responsible for organizing the teaching assistant team, overseeing homework and test corrections, and ensuring excellent course operation."
+
+          - title: "Calculus I Teaching Assistant"
+            period: "March 2022 - July 2024"
+            location: "Santiago Metropolitan Region, Chile"
+            description: "Course assistant and evaluation corrector"
+
+          - title: "PIMU Calculus Tutor"
+            period: "March 2020 - July 2024"
+            location: "Santiago, Chile"
+            description: "PIMU (University Mathematics Insertion Program) tutor for Calculus courses including Precalculus, Calculus I, and Calculus II at PUC. Tutoring consists of personalized sessions with no more than 10 students where the tutor helps reinforce course material through active learning, differing from traditional teaching methods by taking an approach where students face exercises themselves, with the tutor as a guide."
+
+  education:
+    title: "Education"
+    institutions:
+      - name: "Pontificia Universidad Católica de Chile"
+        location: "Santiago, Chile"
+        degree: "Computer Science Engineering"
+        period: "2023 - 2025"
+        description: "Professional degree in Computer Science Engineering, articulated from the Bachelor's program"
+        icon: "💻"
+        tags:
+          ["Computer Science", "Software Engineering", "Professional Degree"]
+
+      - name: "Pontificia Universidad Católica de Chile"
+        location: "Santiago, Chile"
+        degree: "Bachelor in Natural Sciences and Mathematics"
+        period: "2017 - 2023"
+        description: "College program with major in Computer Science and Mathematics"
+        icon: "🎓"
+        tags: ["Computer Science", "Mathematics", "Bachelor Degree"]
+
+      - name: "Liceo Bicentenario Oscar Castro Zúñiga"
+        location: "Rancagua, Chile"
+        degree: "High School Diploma"
+        period: "2013 - 2016"
+        description: "Complete Secondary Education"
+        icon: "🏫"
+        tags: ["Science", "Mathematics"]
+
+  contact:
+    title: "Contact Me"
+    name: "Name"
+    email: "Email"
+    message: "Message"
+    submit: "Send Message"
+    success: "Message sent successfully!"
+    error: "There was an error sending your message."
+
+  common:
+    dark_mode: "Dark Mode"
+    light_mode: "Light Mode"

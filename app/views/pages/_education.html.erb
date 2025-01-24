@@ -1,0 +1,57 @@
+<div class="space-y-8">
+  <h2 class="section-title"><%= t('education.title') %></h2>
+
+  <%# Timeline %>
+  <div class="space-y-8">
+    <% t('education.institutions').each_with_index do |institution, index| %>
+    <div class="card group hover:border-primary-500 transition-colors">
+      <div class="flex gap-6">
+        <%# Icon Column %>
+        <div class="flex-none">
+          <div class="w-12 h-12 rounded-full bg-primary-50 dark:bg-primary-900/10 flex items-center justify-center text-2xl">
+            <%= institution[:icon] %>
+          </div>
+        </div>
+
+        <%# Content Column %>
+        <div class="flex-grow space-y-4">
+          <%# Header %>
+          <div class="space-y-1">
+            <div class="flex items-start justify-between gap-x-4">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                <%= institution[:name] %>
+              </h3>
+              <span class="text-sm font-medium text-primary-600 dark:text-primary-400 whitespace-nowrap">
+                <%= institution[:period] %>
+              </span>
+            </div>
+            <p class="text-lg font-semibold text-gray-700 dark:text-gray-300">
+              <%= institution[:degree] %>
+            </p>
+            <div class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <%= institution[:location] %>
+            </div>
+          </div>
+
+          <%# Description %>
+          <p class="text-gray-600 dark:text-gray-300">
+            <%= institution[:description] %>
+          </p>
+
+          <%# Tags %>
+          <div class="flex flex-wrap gap-2">
+            <% institution[:tags].each do |tag| %>
+            <span class="px-2 py-1 text-xs font-medium text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/10 rounded-full">
+              <%= tag %>
+            </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="space-y-12">
+  <h2 class="section-title"><%= t('skills.title') %></h2>
+
+  <%# Soft Skills %>
+  <div class="space-y-6">
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <%= t('skills.categories.soft_skills.title') %>
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <% t('skills.categories.soft_skills.skills').each do |skill| %>
+      <div class="card group hover:border-primary-500 transition-colors">
+        <div class="flex items-start gap-4">
+          <span class="text-2xl"><%= skill[:icon] %></span>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+              <%= skill[:name] %>
+            </h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              <%= skill[:description] %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Programming Languages %>
+  <div class="space-y-6">
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <%= t('skills.categories.programming.title') %>
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <% t('skills.categories.programming.skills').each do |skill| %>
+      <div class="card group hover:border-primary-500 transition-colors">
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xl"><%= skill[:icon] %></span>
+              <span class="font-semibold text-gray-900 dark:text-white"><%= skill[:name] %></span>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-400"><%= skill[:level] %>%</span>
+          </div>
+          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="h-full bg-primary-500 rounded-full transition-all duration-500" style="width: <%= skill[:level] %>%"></div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Frameworks %>
+  <div class="space-y-6">
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <%= t('skills.categories.frameworks.title') %>
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <% t('skills.categories.frameworks.skills').each do |skill| %>
+      <div class="card group hover:border-primary-500 transition-colors">
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xl"><%= skill[:icon] %></span>
+              <span class="font-semibold text-gray-900 dark:text-white"><%= skill[:name] %></span>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-400"><%= skill[:level] %>%</span>
+          </div>
+          <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div class="h-full bg-primary-500 rounded-full transition-all duration-500" style="width: <%= skill[:level] %>%"></div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Languages %>
+  <div class="space-y-6">
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+      <%= t('skills.categories.languages.title') %>
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <% t('skills.categories.languages.skills').each do |skill| %>
+      <div class="card group hover:border-primary-500 transition-colors">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-xl"><%= skill[:icon] %></span>
+            <span class="font-semibold text-gray-900 dark:text-white"><%= skill[:name] %></span>
+          </div>
+          <span class="text-sm text-primary-500 font-medium"><%= skill[:level] %></span>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="space-y-12">
+  <h2 class="section-title"><%= t('experience.title') %></h2>
+
+  <%# Notion Experience %>
+  <div class="card group">
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+          <%= t('experience.roles.notion.company') %>
+        </h3>
+        <p class="text-lg font-semibold text-primary-500">
+          <%= t('experience.roles.notion.title') %>
+        </p>
+      </div>
+      <div class="text-right">
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          <%= t('experience.roles.notion.period') %>
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-500">
+          <%= t('experience.roles.notion.location') %>
+        </p>
+      </div>
+    </div>
+    <p class="text-gray-600 dark:text-gray-300">
+      <%= t('experience.roles.notion.description') %>
+    </p>
+  </div>
+
+  <%# Buk Experience %>
+  <div class="card group">
+    <div class="mb-6">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <%= t('experience.roles.buk.company') %>
+      </h3>
+
+      <div class="space-y-8">
+        <% t('experience.roles.buk.roles').each do |role| %>
+        <div class="border-l-2 border-primary-500 pl-4">
+          <div class="flex justify-between items-start mb-2">
+            <p class="text-lg font-semibold text-primary-500">
+              <%= role[:title] %>
+            </p>
+            <div class="text-right">
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                <%= role[:period] %>
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-500">
+                <%= role[:location] %>
+              </p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">
+            <%= role[:description] %>
+          </p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <%# PUC Experience %>
+  <div class="card group">
+    <div class="mb-6">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <%= t('experience.roles.puc.company') %>
+      </h3>
+
+      <div class="space-y-8">
+        <% t('experience.roles.puc.roles').each do |role| %>
+        <div class="border-l-2 border-primary-500 pl-4">
+          <div class="flex justify-between items-start mb-2">
+            <p class="text-lg font-semibold text-primary-500">
+              <%= role[:title] %>
+            </p>
+            <div class="text-right">
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                <%= role[:period] %>
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-500">
+                <%= role[:location] %>
+              </p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">
+            <%= role[:description] %>
+          </p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

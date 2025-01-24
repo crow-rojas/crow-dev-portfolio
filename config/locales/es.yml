@@ -1,0 +1,236 @@
+es:
+  navigation:
+    about: "Sobre Mí"
+    projects: "Proyectos"
+    skills: "Habilidades"
+    experience: "Experiencia"
+    education: "Educación"
+    contact: "Contacto"
+
+  about:
+    title: "Sobre Mí"
+    name: "Cristóbal Rojas Brito"
+    role: "Software Engineer II @ Buk | Campus Leader @ Notion"
+    education: "Ingeniería Civil en Computación @ PUC"
+    location: "Región Metropolitana de Santiago"
+    description: |
+      ¡Hola! 👋 Me apasiona programar en Ruby y Rails ❤️
+
+      Aunque soy principalmente desarrollador backend, siempre estoy ansioso por aprender tecnologías frontend, especialmente React. Soy un entusiasta de los videojuegos y estoy gradualmente transitando del desarrollo de software al desarrollo de juegos.
+
+      Próximamente: nómada digital ✈️
+
+      Una de mis mayores pasiones es la enseñanza, particularmente las matemáticas, y especialmente cuando se trata de Cálculo 📚
+    interests:
+      - title: "Desarrollo Backend"
+        icon: "💻"
+        description: "Especializado en desarrollo con Ruby on Rails"
+      - title: "Enseñanza"
+        icon: "👨‍🏫"
+        description: "Apasionado por compartir conocimiento y ayudar a otros a aprender"
+      - title: "Videojuegos"
+        icon: "🎮"
+        description: "Entusiasta y aspirante a desarrollador de juegos"
+      - title: "Matemáticas"
+        icon: "📐"
+        description: "Me encanta enseñar y explorar conceptos matemáticos"
+
+  projects:
+    title: "Proyectos"
+    categories:
+      professional:
+        title: "Proyectos Profesionales @ Buk"
+        description: "Proyectos y logros clave en mi rol actual"
+        projects:
+          - name: "Building Block Translatable"
+            description: "Diseñé e implementé un nuevo building block que extiende formularios para soportar traducciones definidas por el usuario, incluyendo arquitectura backend y patrones de diseño."
+            tags: ["Ruby on Rails", "Arquitectura", "Patrones de Diseño"]
+            icon: "🌐"
+
+          - name: "Integración Zendesk"
+            description: "Implementé una nueva burbuja de Zendesk desde cero, incluyendo desarrollo de cliente API interno, autenticación JWT y diseño responsivo."
+            tags: ["Integración API", "JWT", "Frontend", "Backend"]
+            icon: "💬"
+
+          - name: "Herramientas de Desarrollo"
+            description: "Creé herramientas de deploy para mejorar la experiencia del desarrollador y la eficiencia del flujo de trabajo."
+            tags: ["DevOps", "Automatización", "DX"]
+            icon: "🛠️"
+
+          - name: "Integración Sendgrid"
+            description: "Implementé funcionalidades usando la API de Sendgrid para mejorar la funcionalidad de correo electrónico."
+            tags: ["Integración API", "Email", "Backend"]
+            icon: "📧"
+
+      personal:
+        title: "Proyectos Personales & Universitarios"
+        description: "Proyectos en los que he trabajado para aprender y crecer"
+        projects:
+          - name: "Sitio Web Portfolio"
+            description: "Este sitio web, construido con Ruby on Rails y tecnologías web modernas."
+            tags: ["Ruby on Rails", "Tailwind CSS", "Hotwire"]
+            icon: "🌟"
+            link: "https://github.com/username/portfolio"
+
+          - name: "Backend Zmartboard"
+            description: "Contribuí al equipo de backend, mejorando y añadiendo nuevas funcionalidades a esta aplicación Rails de gran escala."
+            tags: ["Ruby on Rails", "Backend", "Colaboración en Equipo"]
+            icon: "📊"
+
+          - name: "Proyecto de Desarrollo Web"
+            description: "Proyecto universitario usando HTML, CSS y JS nativo para el frontend con Node.js en el backend."
+            tags: ["Node.js", "JavaScript", "HTML/CSS"]
+            icon: "💻"
+
+          - name: "Proyectos de Base de Datos"
+            description: "Experiencia con bases de datos SQL (PostgreSQL) y NoSQL (MongoDB), con enfoque en bases de datos relacionales."
+            tags: ["PostgreSQL", "MongoDB", "Diseño de BD"]
+            icon: "🗄️"
+
+  skills:
+    title: "Habilidades"
+    categories:
+      soft_skills:
+        title: "Habilidades Blandas"
+        skills:
+          - name: "Paciente"
+            description: "Capacidad de mantener la calma y trabajar metódicamente"
+            icon: "🧘‍♂️"
+          - name: "Trabajo en Equipo"
+            description: "Fuertes habilidades de colaboración y comunicación"
+            icon: "🤝"
+          - name: "Creativo"
+            description: "Enfoque innovador para resolver problemas"
+            icon: "🎨"
+          - name: "Proactivo"
+            description: "Auto-motivado y toma la iniciativa"
+            icon: "🚀"
+          - name: "Adaptable"
+            description: "Rápido para aprender y adaptarse a nuevas situaciones"
+            icon: "🔄"
+
+      programming:
+        title: "Lenguajes de Programación"
+        skills:
+          - name: "Python"
+            level: 90
+            icon: "🐍"
+          - name: "Ruby"
+            level: 95
+            icon: "💎"
+          - name: "JavaScript"
+            level: 85
+            icon: "🟨"
+          - name: "C"
+            level: 80
+            icon: "⚡"
+
+      frameworks:
+        title: "Frameworks"
+        skills:
+          - name: "Django"
+            level: 85
+            icon: "🎯"
+          - name: "Ruby on Rails"
+            level: 95
+            icon: "🛤️"
+          - name: "Node.js"
+            level: 80
+            icon: "📦"
+
+      languages:
+        title: "Idiomas"
+        skills:
+          - name: "Español"
+            level: "Nativo"
+            icon: "🇪🇸"
+          - name: "Inglés"
+            level: "Avanzado (C1 CEFR Listening & Reading)"
+            icon: "🇺🇸"
+
+  experience:
+    title: "Experiencia Profesional"
+    current: "Presente"
+    roles:
+      notion:
+        company: "Notion"
+        title: "Campus Leader"
+        period: "septiembre 2024 - Presente"
+        location: "Gran Santiago, Región Metropolitana de Santiago, Chile"
+        description: "Lidero talleres y construyo una comunidad de apoyo, ayudando a los estudiantes a dominar Notion. Mi rol incluye facilitar sesiones de capacitación, crear recursos y brindar apoyo personalizado para mejorar la productividad y organización en el campus."
+
+      buk:
+        company: "Buk"
+        roles:
+          - title: "Semi Senior Software Engineer"
+            period: "julio 2024 - Presente"
+            location: "Región Metropolitana de Santiago, Chile"
+            description: "Semi Senior (Level 2) Software Engineer en el equipo de Plataforma, encargado principalmente de mantener y mejorar el developer experience y los pilares de la aplicación de Buk."
+
+          - title: "Software Engineer"
+            period: "marzo 2023 - julio 2024"
+            location: "Región Metropolitana de Santiago, Chile"
+            description: "Trabajando en el equipo de Framework, desarrollando herramientas y soluciones para los desarrolladores de Buk."
+
+          - title: "Practicante profesional"
+            period: "enero 2023 - marzo 2023"
+            location: "Región Metropolitana de Santiago, Chile"
+            description: "Practicante del área de desarrollo de Buk."
+
+      puc:
+        company: "Pontificia Universidad Católica de Chile"
+        roles:
+          - title: "Ayudante Jefe Teoría de Autómatas"
+            period: "julio 2024 - Presente"
+            location: "Santiago, Chile"
+            description: "Coordinador del curso Teoría de Autómatas de la PUC, encargado de organizar al cuerpo de ayudantes, preocuparse por las correcciones de tareas y pruebas, y en general que el curso funcione excelente."
+
+          - title: "Ayudante de Cálculo I"
+            period: "marzo 2022 - julio 2024"
+            location: "Gran Santiago, Región Metropolitana de Santiago, Chile"
+            description: "Ayudante de cátedra y corrector de evaluaciones"
+
+          - title: "Tutor PIMU de cursos de Cálculo"
+            period: "marzo 2020 - julio 2024"
+            location: "Santiago"
+            description: "Tutor PIMU (Programa de Inserción a la Matemática Universitaria) de cursos de Cálculo como Precálculo, Cálculo I y Cálculo II de la PUC. Las tutorías consisten en instancias personalizadas con no más de 10 alumnos donde el tutor les ayuda a reforzar la materia del curso mediante aprendizaje activo, es decir, dista de la ayudantía tradicional donde se enseña de manera expositiva, tomando más un enfoque donde los alumnos se enfrentan ellos mismos a ejercicios, con el tutor al lado como guía."
+
+  education:
+    title: "Educación"
+    institutions:
+      - name: "Pontificia Universidad Católica de Chile"
+        location: "Santiago, Chile"
+        degree: "Ingeniería Civil en Computación"
+        period: "2023 - 2025"
+        description: "Título profesional en Ingeniería Civil en Computación, articulado desde el programa de Licenciatura"
+        icon: "💻"
+        tags: ["Computación", "Ingeniería de Software", "Título Profesional"]
+
+      - name: "Pontificia Universidad Católica de Chile"
+        location: "Santiago, Chile"
+        degree: "Licenciatura en Ciencias Naturales y Matemáticas"
+        period: "2017 - 2023"
+        description: "Programa College con especialización en Computación y Matemáticas"
+        icon: "🎓"
+        tags: ["Computación", "Matemáticas", "Licenciatura"]
+
+      - name: "Liceo Bicentenario Oscar Castro Zúñiga"
+        location: "Rancagua, Chile"
+        degree: "Educación Media"
+        period: "2013 - 2016"
+        description: "Educación Media Completa"
+        icon: "🏫"
+        tags: ["Ciencias", "Matemáticas"]
+
+  contact:
+    title: "Contáctame"
+    name: "Nombre"
+    email: "Correo"
+    message: "Mensaje"
+    submit: "Enviar Mensaje"
+    success: "¡Mensaje enviado exitosamente!"
+    error: "Hubo un error al enviar tu mensaje."
+
+  common:
+    dark_mode: "Modo Oscuro"
+    light_mode: "Modo Claro"

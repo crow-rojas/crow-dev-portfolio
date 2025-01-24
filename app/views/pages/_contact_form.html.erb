@@ -1,0 +1,25 @@
+<div class="space-y-8">
+  <h2 class="section-title"><%= t('contact.title') %></h2>
+  <div class="card max-w-2xl mx-auto">
+    <%= form_with(model: Contact.new, url: contacts_path, local: true, class: "space-y-6") do |f| %>
+    <div>
+      <%= f.label :name, t('contact.name'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
+      <%= f.text_field :name, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
+    </div>
+
+    <div>
+      <%= f.label :email, t('contact.email'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
+      <%= f.email_field :email, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
+    </div>
+
+    <div>
+      <%= f.label :message, t('contact.message'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
+      <%= f.text_area :message, rows: 4, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
+    </div>
+
+    <div>
+      <%= f.submit t('contact.submit'), class: "btn-primary w-full" %>
+    </div>
+    <% end %>
+  </div>
+</div>

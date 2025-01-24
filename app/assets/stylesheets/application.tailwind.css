@@ -2,6 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl font-bold mb-8 bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+
+  .section-subtitle {
+    @apply text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200;
+  }
+
+  .nav-link {
+    @apply relative px-2 py-1 transition-all duration-300;
+  }
+
+  .nav-link.active {
+    @apply text-primary-500;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 -bottom-1 h-[2px] w-0 bg-primary-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 dark:hover:bg-primary-400;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-gray-300 hover:border-primary-500 dark:border-gray-700 dark:hover:border-primary-500;
+  }
+
+  .card {
+    @apply bg-white/50 dark:bg-dark-800/50 backdrop-blur-md rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl border border-gray-200/50 dark:border-gray-800/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 /*
 
 @layer components {
