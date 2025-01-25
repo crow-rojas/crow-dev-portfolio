@@ -1,7 +1,20 @@
-<div class="space-y-8">
+<div class="space-y-8" id="contact_form">
   <h2 class="section-title"><%= t('contact.title') %></h2>
   <div class="card max-w-2xl mx-auto">
-    <%= form_with(model: Contact.new, url: contacts_path, local: true, class: "space-y-6") do |f| %>
+    <%= form_with(model: Contact.new, 
+        url: contacts_path, 
+        class: "space-y-6",
+        data: { contact_target: "form" }) do |f| %>
+    <% if @contact&.errors&.any? %>
+    <div class="bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 p-4 rounded-lg">
+      <ul class="list-disc list-inside">
+        <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
     <div>
       <%= f.label :name, t('contact.name'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
       <%= f.text_field :name, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>

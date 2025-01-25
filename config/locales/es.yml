@@ -230,7 +230,16 @@ es:
     submit: "Enviar Mensaje"
     success: "¡Mensaje enviado exitosamente!"
     error: "Hubo un error al enviar tu mensaje."
+    success_message: "¡Me pondré en contacto contigo lo antes posible!"
+    send_another: "Enviar Otro Mensaje"
 
   common:
     dark_mode: "Modo Oscuro"
     light_mode: "Modo Claro"
+
+  contact_mailer:
+    contact_form:
+      subject: "Nuevo Mensaje del Formulario de Contacto"
+      title: "Nuevo Mensaje de Contacto"
+      from_label: "De"
+      message_label: "Mensaje"

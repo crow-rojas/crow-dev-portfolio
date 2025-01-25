@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+    /* Base */
+    body {
+      margin: 0;
+      padding: 0;
+      min-width: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+
+    /* Container */
+    .email-wrapper {
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .email-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Typography */
+    h1 {
+      color: #ff7733;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      margin-bottom: 16px;
+      padding: 12px;
+      background-color: #f9fafb;
+      border-radius: 6px;
+    }
+
+    .message-box {
+      margin-top: 24px;
+      padding: 16px;
+      background-color: #f9fafb;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="email-content">
+      <h1><%= t('.title') %></h1>
+
+      <div class="label"><%= t('.from_label') %></div>
+      <div class="value">
+        <%= @contact.name %> (<%= @contact.email %>)
+      </div>
+
+      <div class="label"><%= t('.message_label') %></div>
+      <div class="message-box">
+        <%= simple_format @contact.message %>
+      </div>
+
+      <div class="footer">
+        Crow Dev Portfolio
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

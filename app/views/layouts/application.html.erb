@@ -50,7 +50,7 @@
             <%# Section Links %>
             <div class="hidden md:flex items-center gap-6">
               <% %w[about projects skills experience education contact].each do |section| %>
-              <a href="#<%= section %>" class="nav-link text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-500">
+              <a href="#<%= section %>_section" class="nav-link text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-500">
                 <%= t("navigation.#{section}") %>
               </a>
               <% end %>

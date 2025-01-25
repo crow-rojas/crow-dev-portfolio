@@ -260,7 +260,16 @@ en:
     submit: "Send Message"
     success: "Message sent successfully!"
     error: "There was an error sending your message."
+    success_message: "I'll get back to you as soon as possible!"
+    send_another: "Send Another Message"
 
   common:
     dark_mode: "Dark Mode"
     light_mode: "Light Mode"
+
+  contact_mailer:
+    contact_form:
+      subject: "New Contact Form Submission from Portfolio"
+      title: "New Contact Form Message"
+      from_label: "From"
+      message_label: "Message"

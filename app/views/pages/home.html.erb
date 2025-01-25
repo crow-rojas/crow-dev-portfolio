@@ -2,10 +2,10 @@
   <%# Main Content %>
   <div class="pt-24">
     <%# Sections %>
-    <% %w[about projects skills experience education contact_form].each do |section| %>
-    <section id="<%= section %>" class="min-h-screen py-16 flex items-center scroll-mt-24">
+    <% %w[about projects skills experience education contact].each do |section| %>
+    <section id="<%= section %>_section" class="min-h-screen py-16 flex items-center scroll-mt-24" <%= 'data-controller=contact data-contact-target=section' if section == 'contact' %>>
       <div class="container mx-auto px-4 md:px-6">
-        <%= render "pages/#{section}" %>
+        <%= render "pages/#{section == 'contact' ? 'contact_form' : section}" %>
       </div>
     </section>
     <% end %>
@@ -14,10 +14,10 @@
   <%# Mobile Navigation Menu %>
   <nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-800/50 lg:hidden z-50">
     <div class="container mx-auto px-4 py-2">
-      <div class="grid grid-cols-6 gap-1">
+      <div class="grid grid-cols-6 gap-2">
         <% %w[about projects skills experience education contact].each do |section| %>
-        <a href="#<%= section %>" class="flex flex-col items-center p-2 text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-500">
-          <span class="text-lg mb-1">
+        <a href="#<%= section %>_section" class="flex flex-col items-center p-1 text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-500">
+          <span class="text-base">
             <%= {
                   'about': '👤',
                   'projects': '💼',
@@ -27,7 +27,7 @@
                   'contact': '📧'
                 }[section.to_sym] %>
           </span>
-          <span class="text-xs font-medium"><%= t("navigation.#{section}") %></span>
+          <span class="text-[10px] font-medium leading-tight"><%= t("navigation.#{section}") %></span>
         </a>
         <% end %>
       </div>
