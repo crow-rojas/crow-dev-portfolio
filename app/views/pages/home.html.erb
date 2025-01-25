@@ -1,9 +1,12 @@
-<div class="relative">
-  <%# Main Content %>
-  <div class="pt-24">
+<div class="relative" data-controller="cv-mode" data-cv-mode-target="content">
+  <%# CV Paper Layout %>
+  <%= render "pages/cv_paper" %>
+
+  <%# Regular Content %>
+  <div class="pt-24 transition-all duration-300 regular-content">
     <%# Sections %>
     <% %w[about projects skills experience education contact].each do |section| %>
-    <section id="<%= section %>_section" class="min-h-screen py-16 flex items-center scroll-mt-24" <%= 'data-controller=contact data-contact-target=section' if section == 'contact' %>>
+    <section id="<%= section %>_section" class="min-h-screen py-16 flex items-center scroll-mt-24 transition-all duration-300" <%= 'data-controller=contact data-contact-target=section' if section == 'contact' %>>
       <div class="container mx-auto px-4 md:px-6">
         <%= render "pages/#{section == 'contact' ? 'contact_form' : section}" %>
       </div>

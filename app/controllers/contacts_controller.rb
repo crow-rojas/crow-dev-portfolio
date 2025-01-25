@@ -2,22 +2,26 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    respond_to do |format|
-      if @contact.save
-        # Send email
-        ContactMailer.contact_form(@contact).deliver_later
+    if @contact.save
+      # Send email immediately
+      ContactMailer.contact_form(@contact).deliver_now
 
-        format.html { redirect_back(fallback_location: root_path, notice: t("contact.success")) }
+      respond_to do |format|
         format.turbo_stream {
-          render turbo_stream: turbo_stream.update("contact_form",
-            partial: "pages/contact_success")
+          render turbo_stream: turbo_stream.replace(
+            "contact_form",
+            partial: "pages/contact_success"
+          )
         }
-      else
-        format.html { redirect_back(fallback_location: root_path, alert: t("contact.error")) }
+      end
+    else
+      respond_to do |format|
         format.turbo_stream {
-          render turbo_stream: turbo_stream.update("contact_form",
+          render turbo_stream: turbo_stream.replace(
+            "contact_form",
             partial: "pages/contact_form",
-            locals: { contact: @contact })
+            locals: { contact: @contact }
+          ), status: :unprocessable_entity
         }
       end
     end

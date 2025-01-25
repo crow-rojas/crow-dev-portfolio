@@ -6,6 +6,93 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* CV Mode Styles */
+  body.cv-mode {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  body.cv-mode main {
+    @apply flex justify-center items-start py-8;
+  }
+
+  /* A4 Paper styles */
+  .cv-paper {
+    @apply hidden;
+  }
+
+  body.cv-mode .cv-paper {
+    @apply block bg-white dark:bg-dark-800 w-[210mm] min-h-[297mm] shadow-xl mx-auto p-8;
+    @apply border border-gray-200 dark:border-gray-700;
+  }
+
+  body.cv-mode .cv-paper .section-title {
+    @apply text-xl font-bold mb-4;
+  }
+
+  body.cv-mode .cv-paper .section {
+    @apply mb-6;
+  }
+
+  /* Hide regular content in CV mode */
+  body.cv-mode .regular-content {
+    @apply hidden;
+  }
+
+  body.cv-mode header {
+    @apply relative bg-transparent print:hidden;
+  }
+
+  body.cv-mode section {
+    @apply min-h-0 py-8 print:py-4;
+  }
+
+  body.cv-mode .section-title {
+    @apply text-2xl mb-4 print:text-black;
+  }
+
+  body.cv-mode .card {
+    @apply bg-transparent shadow-none p-0 print:border-none;
+  }
+
+  body.cv-mode nav.mobile-nav {
+    @apply hidden;
+  }
+
+  /* Hide decorative elements in CV mode */
+  body.cv-mode .decorative {
+    @apply hidden;
+  }
+
+  /* Compact layout for projects */
+  body.cv-mode .project-grid {
+    @apply grid-cols-1;
+  }
+
+  /* Compact timeline for experience */
+  body.cv-mode .timeline-entry {
+    @apply py-2;
+  }
+
+  /* Hide contact form in CV mode */
+  body.cv-mode #contact_section {
+    @apply hidden print:hidden;
+  }
+
+  /* Print styles */
+  @media print {
+    body.cv-mode {
+      @apply bg-white;
+    }
+
+    body.cv-mode .cv-paper {
+      @apply shadow-none w-full p-0 border-0;
+    }
+
+    body.cv-mode .section-title {
+      @apply text-xl;
+    }
+  }
 }
 
 @layer components {

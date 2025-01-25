@@ -236,6 +236,7 @@ es:
   common:
     dark_mode: "Modo Oscuro"
     light_mode: "Modo Claro"
+    cv_mode: "Modo CV"
 
   contact_mailer:
     contact_form:

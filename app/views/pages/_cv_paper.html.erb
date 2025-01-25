@@ -1,0 +1,87 @@
+<div class="cv-paper">
+  <%# Header %>
+  <div class="text-center mb-8">
+    <h1 class="text-2xl font-bold"><%= t('about.name') %></h1>
+    <p class="text-primary-600 dark:text-primary-400"><%= t('about.role') %></p>
+    <p class="text-sm text-gray-600 dark:text-gray-400"><%= t('about.location') %></p>
+  </div>
+
+  <%# About %>
+  <div class="section">
+    <h2 class="section-title"><%= t('about.title') %></h2>
+    <p class="text-sm"><%= t('about.description') %></p>
+  </div>
+
+  <%# Experience %>
+  <div class="section">
+    <h2 class="section-title"><%= t('experience.title') %></h2>
+    <%# Notion Experience %>
+    <div class="mb-4">
+      <div class="flex justify-between">
+        <h3 class="font-semibold"><%= t('experience.roles.notion.company') %></h3>
+        <span class="text-sm text-gray-600 dark:text-gray-400"><%= t('experience.roles.notion.period') %></span>
+      </div>
+      <p class="text-sm font-medium text-primary-600 dark:text-primary-400"><%= t('experience.roles.notion.title') %></p>
+      <p class="text-sm text-gray-600 dark:text-gray-400"><%= t('experience.roles.notion.description') %></p>
+    </div>
+
+    <%# Buk Experience %>
+    <div class="mb-4">
+      <h3 class="font-semibold"><%= t('experience.roles.buk.company') %></h3>
+      <% t('experience.roles.buk.roles').each do |role| %>
+      <div class="ml-4 mb-2">
+        <div class="flex justify-between text-sm">
+          <span class="font-medium"><%= role[:title] %></span>
+          <span class="text-gray-600 dark:text-gray-400"><%= role[:period] %></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><%= role[:description] %></p>
+      </div>
+      <% end %>
+    </div>
+
+    <%# PUC Experience %>
+    <div class="mb-4">
+      <h3 class="font-semibold"><%= t('experience.roles.puc.company') %></h3>
+      <% t('experience.roles.puc.roles').each do |role| %>
+      <div class="ml-4 mb-2">
+        <div class="flex justify-between text-sm">
+          <span class="font-medium"><%= role[:title] %></span>
+          <span class="text-gray-600 dark:text-gray-400"><%= role[:period] %></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><%= role[:description] %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Education %>
+  <div class="section">
+    <h2 class="section-title"><%= t('education.title') %></h2>
+    <% t('education.institutions').each do |institution| %>
+    <div class="mb-4">
+      <div class="flex justify-between">
+        <h3 class="font-semibold"><%= institution[:name] %></h3>
+        <span class="text-sm text-gray-600 dark:text-gray-400"><%= institution[:period] %></span>
+      </div>
+      <p class="text-sm"><%= institution[:degree] %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <%# Skills %>
+  <div class="section">
+    <h2 class="section-title"><%= t('skills.title') %></h2>
+    <div class="grid grid-cols-2 gap-4">
+      <% t('skills.categories').each do |category, data| %>
+      <div>
+        <h3 class="font-semibold mb-2"><%= data[:title] %></h3>
+        <ul class="list-disc list-inside text-sm">
+          <% data[:skills].each do |skill| %>
+          <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

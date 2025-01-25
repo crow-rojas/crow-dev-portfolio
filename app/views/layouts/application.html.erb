@@ -71,6 +71,12 @@
               <span class="dark:hidden">🌙</span>
               <span class="hidden dark:inline">☀️</span>
             </button>
+
+            <%# CV Mode Toggle %>
+            <button data-controller="cv-mode" data-cv-mode-active-class="bg-primary-500 text-white" data-action="cv-mode#toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-800 transition-colors duration-200 flex items-center gap-2">
+              <span>📄</span>
+              <span class="text-sm font-medium hidden md:inline"><%= t("common.cv_mode") %></span>
+            </button>
           </div>
         </div>
       </nav>
