@@ -1,38 +1,21 @@
 <div class="space-y-8" id="contact_form">
   <h2 class="section-title"><%= t('contact.title') %></h2>
   <div class="card max-w-2xl mx-auto">
-    <%= form_with(model: Contact.new, 
-        url: contacts_path, 
-        class: "space-y-6",
-        data: { contact_target: "form" }) do |f| %>
-    <% if @contact&.errors&.any? %>
-    <div class="bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 p-4 rounded-lg">
-      <ul class="list-disc list-inside">
-        <% @contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
+    <div class="text-center p-6">
+      <div class="text-5xl mb-4">📧</div>
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        Contact Form Disabled
+      </h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        The contact form is currently disabled. Please reach out through the email address below.
+      </p>
+      <a href="mailto:cristobal.rojasbrito@gmail.com" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+        </svg>
+        cristobal.rojasbrito@gmail.com
+      </a>
     </div>
-    <% end %>
-
-    <div>
-      <%= f.label :name, t('contact.name'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
-      <%= f.text_field :name, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
-    </div>
-
-    <div>
-      <%= f.label :email, t('contact.email'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
-      <%= f.email_field :email, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
-    </div>
-
-    <div>
-      <%= f.label :message, t('contact.message'), class: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" %>
-      <%= f.text_area :message, rows: 4, class: "w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring-primary-500 focus:border-primary-500" %>
-    </div>
-
-    <div>
-      <%= f.submit t('contact.submit'), class: "btn-primary w-full" %>
-    </div>
-    <% end %>
   </div>
 </div>

@@ -1,45 +1,17 @@
 class ContactsController < ApplicationController
   def create
-    @contact = Contact.new(contact_params)
-
-    # Check for spam before processing
-    if spam_detected?(@contact)
-      # Silently reject spam without notifying the sender
-      # but show success message to avoid revealing it was blocked
-      respond_to do |format|
-        format.turbo_stream {
-          render turbo_stream: turbo_stream.replace(
-            "contact_form",
-            partial: "pages/contact_success"
-          )
-        }
-      end
-      return
+    # Contact form is disabled
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: "Contact form is currently disabled." }
+      format.turbo_stream {
+        render turbo_stream: turbo_stream.replace(
+          "contact_form",
+          partial: "pages/contact_form"
+        )
+      }
+      format.json { render json: { error: "Contact form is disabled" }, status: :unprocessable_entity }
     end
-
-    if @contact.save
-      # Send email immediately
-      ContactMailer.contact_form(@contact).deliver_now
-
-      respond_to do |format|
-        format.turbo_stream {
-          render turbo_stream: turbo_stream.replace(
-            "contact_form",
-            partial: "pages/contact_success"
-          )
-        }
-      end
-    else
-      respond_to do |format|
-        format.turbo_stream {
-          render turbo_stream: turbo_stream.replace(
-            "contact_form",
-            partial: "pages/contact_form",
-            locals: { contact: @contact }
-          ), status: :unprocessable_entity
-        }
-      end
-    end
+    return
   end
 
   private
