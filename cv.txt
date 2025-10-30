@@ -1,0 +1,74 @@
+CRISTÓBAL ROJAS BRITO
+Software Engineer II
+ crowrojas.dev
+Ó +56 9 4459 2325
+½ Santiago, Chile
+R cristobal.rojasbrito@gmail.com
+ github.com/crow-rojas
+° in/crow-rojas
+SOBRE MÍ
+Software Engineer con casi 3 años de experiencia construyendo
+aplicaciones Rails en producción a escala. Especializado en
+desarrollo fullstack end-to-end, desde arquitectura backend y
+diseño de APIs hasta implementación de interfaces responsivas.
+Me apasiona resolver problemas complejos con código limpio y
+escalable, con fuerte enfoque en developer experience, testing
+y calidad. Creador de command_deck, un Rails engine open
+source que mejora el developer experience mediante un panel
+de acciones rápidas para devs.
+Valoro equipos que se mueven rápido sin sacrificar calidad,
+toman decisiones basadas en primeros principios, y construyen
+productos con impacto real.
+STACK TÉCNICO
+Backend: Ruby on Rails, PostgreSQL, Redis
+Frontend: JavaScript, React, Tailwind
+DevOps: Docker, CI/CD (Jenkins, GH Actions), Git, Ob-
+servability (Grafana)
+Prácticas: Testing (RSpec, Minitest), Agile, Service Ob-
+jects, Background Jobs
+PROYECTOS DESTACADOS
+Open Source command_deck - Gema de Ruby github.com/crow-rojas/command_deck
+Rails engine para desarrolladores que añade un panel flotante para ejecutar acciones custom y tareas de admin sin
+abrir Rails console. Mejora significativamente el developer experience en aplicaciones Rails. Demuestra capacidad de
+diseño de herramientas internas, testing con RSpec, y pensamiento en productividad del equipo.
+Desarrollo Proyectos de alto impacto en Buk
+• Diseñé e implementé sistema de formularios multiidioma usado por 15+ equipos, reduciendo 40% el tiempo de
+desarrollo de features internacionales. Incluye arquitectura backend escalable y patrones de diseño.
+• Construí integración completa con Zendesk desde cero: cliente API interno, autenticación JWT, UI responsiva.
+Procesa 500+ tickets semanales para equipos de soporte.
+• Creé herramientas de deploy que redujeron tiempo de deployment de 45min a 8min, mejorando productividad de
+20+ desarrolladores.
+• Lideré iniciativa de testing que aumentó coverage de 65% a 85% en servicios core del equipo de Plataforma.
+• Implementé integraciones con APIs externas (Sendgrid, Google OAuth) para servicios críticos de la aplicación.
+Desarrollo ZmartBoard - Gestión de proyectos ágiles zmartboard.cloud
+Clon de Trello construido en Rails para equipos universitarios trabajando con metodologías ágiles. Backend completo
+con APIs RESTful, autenticación OAuth con Google, y PostgreSQL. Implementación de tableros Kanban en tiempo real.
+Desarrollo Portafolio Personal crowrojas.dev
+Sitio web personal construido con Rails + Tailwind, desplegado en Fly.io con sistema de correos integrado vía SMTP.
+Demuestra capacidad fullstack end-to-end.
+EXPERIENCIA PROFESIONAL
+01/2023 – Presente
+(casi 3 años)
+Software Engineer II Buk - Plataforma de Recursos Humanos
+Comencé como practicante y crecí a nivel Semi-Senior (Level II) en el equipo de Plataforma, responsable de los build-
+ing blocks core que soportan toda la aplicación de Buk y son usados por múltiples equipos de producto. Actualmente
+parte del equipo Usuarios y Perfiles, encargados de los accesos y permisos de los usuarios. También soy profesor de
+nuevos ingresos de devs.
+09/2024 – Presente Campus Leader Notion
+Lideré talleres y construí comunidad en la PUC, ayudando a estudiantes a dominar Notion. Incluía facilitar sesiones
+de capacitación, crear recursos educativos, y administrar eventos auspiciados por Notion. Demuestra capacidad de
+liderazgo, enseñanza y construcción de comunidades.
+2020 – 2024 Ayudante y Tutor Universitario Pontificia Universidad Católica de Chile
+• Ayudante de Excelencia: Reconocimiento que se da a 10 (de +400) ayudantes por el apoyo, compromiso y dedi-
+cación en los cursos de matemáticos.
+• Coordinador del curso Teoría de Autómatas: organización de equipo de ayudantes, supervisión de correcciones, y
+gestión operacional del curso.
+• Ayudante de cátedra en Cálculo I por 2 años: corrección de evaluaciones y apoyo a estudiantes.
+• Tutor PIMU: sesiones personalizadas con metodología de aprendizaje activo para grupos pequeños de estudiantes.
+EDUCACIÓN
+2023 - 2025 Ingeniería Civil en Computación Pontificia Universidad Católica de Chile
+Título Profesional
+2017 - 2023 College de Ciencias Naturales y Matemáticas Pontificia Universidad Católica de Chile
+Licenciatura
+IDIOMAS
+Español - Nativo, Inglés - Avanzado (C1 CEFR Listening & Reading)

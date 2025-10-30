@@ -39,19 +39,17 @@ en:
   about:
     title: "About Me"
     name: "Cristóbal Rojas Brito"
-    role: "Software Engineer II @ Buk | Campus Leader @ Notion"
+    role: "Software Engineer II @ Buk | Former Campus Leader @ Notion"
     education: "Computer Science Engineering @ PUC"
     location: "Santiago Metropolitan Area"
     description: |
-      Hello! 👋 I'm passionate about programming in Ruby and Rails ❤️
+      Software Engineer with nearly 3 years of experience building production Rails applications at scale. Specialized in fullstack end-to-end development, from backend architecture and API design to responsive interface implementation.
 
-      While I'm primarily a backend developer, I'm always eager to learn frontend technologies, especially React. I'm a gaming enthusiast gradually transitioning from software development to game development.
+      I'm passionate about solving complex problems with clean and scalable code, with strong focus on developer experience, testing, and quality. Creator of command_deck, an open source Rails engine that improves developer experience through a quick actions panel for devs.
 
-      Coming soon: digital nomad ✈️
-
-      One of my greatest passions is teaching, particularly mathematics, and especially when it comes to Calculus 📚
+      I value teams that move fast without sacrificing quality, make decisions based on first principles, and build products with real impact.
     interests:
-      - title: "Backend Development"
+      - title: "Full-Stack Development"
         icon: "💻"
         description: "Specialized in Ruby on Rails development"
       - title: "Teaching"
@@ -67,54 +65,55 @@ en:
   projects:
     title: "Projects"
     categories:
+      open_source:
+        title: "Open Source"
+        description: "Open source contributions and projects"
+        projects:
+          - name: "command_deck"
+            description: "Rails engine for developers that adds a floating panel to execute custom actions and admin tasks without opening Rails console. Significantly improves developer experience in Rails applications."
+            tags: ["Ruby on Rails", "Developer Tools", "RSpec", "Open Source"]
+            icon: "💎"
+            link: "https://github.com/crow-rojas/command_deck"
+
       professional:
-        title: "Professional Projects @ Buk"
+        title: "High-Impact Projects @ Buk"
         description: "Key projects and achievements in my current role"
         projects:
-          - name: "Translatable Building Block"
-            description: "Designed and implemented a new building block that extends forms to support user-defined translations, including backend architecture and design patterns."
-            tags: ["Ruby on Rails", "Architecture", "Design Patterns"]
+          - name: "External API Integrations"
+            description: "Implemented integrations with external APIs (Sendgrid, Google OAuth) for critical application services."
+            tags: ["API Integration", "OAuth", "Backend"]
+            icon: "🔌"
+
+          - name: "Multilingual Forms System"
+            description: "Designed and implemented a multilingual forms system used by 10+ teams. Includes scalable backend architecture and design patterns."
+            tags: ["Ruby on Rails", "Architecture", "i18n", "Design Patterns"]
             icon: "🌐"
 
           - name: "Zendesk Integration"
-            description: "Implemented a new Zendesk bubble from scratch, including internal API client development, JWT authentication, and responsive design."
+            description: "Built complete Zendesk integration from scratch: internal API client, JWT authentication, responsive UI. Processes 500+ tickets weekly for support teams."
             tags: ["API Integration", "JWT", "Frontend", "Backend"]
             icon: "💬"
 
-          - name: "Developer Tools"
-            description: "Created deployment tools to improve developer experience and workflow efficiency."
-            tags: ["DevOps", "Automation", "DX"]
+          - name: "Deployment Tools"
+            description: "Created deployment tools that automated standard commits, improving productivity for many developers."
+            tags: ["DevOps", "Automation", "Developer Experience"]
             icon: "🛠️"
-
-          - name: "Sendgrid Integration"
-            description: "Implemented features using the Sendgrid API for improved email functionality."
-            tags: ["API Integration", "Email", "Backend"]
-            icon: "📧"
 
       personal:
         title: "Personal & University Projects"
         description: "Projects I've worked on to learn and grow"
         projects:
-          - name: "Portfolio Website"
-            description: "This website, built with Ruby on Rails and modern web technologies."
-            tags: ["Ruby on Rails", "Tailwind CSS", "Hotwire"]
-            icon: "🌟"
-            link: "https://github.com/username/portfolio"
-
-          - name: "Zmartboard Backend"
-            description: "Contributed to the backend team, improving and adding new features to this large-scale Rails application."
-            tags: ["Ruby on Rails", "Backend", "Team Collaboration"]
+          - name: "ZmartBoard"
+            description: "Trello clone built with Rails for university teams working with agile methodologies. Complete backend with RESTful APIs, OAuth authentication with Google, and PostgreSQL. Real-time Kanban board implementation."
+            tags: ["Ruby on Rails", "REST API", "OAuth", "PostgreSQL"]
             icon: "📊"
+            link: "https://zmartboard.cloud"
 
-          - name: "Web Development Project"
-            description: "University project using vanilla HTML, CSS, and JS for frontend with Node.js backend."
-            tags: ["Node.js", "JavaScript", "HTML/CSS"]
-            icon: "💻"
-
-          - name: "Database Projects"
-            description: "Experience with both SQL (PostgreSQL) and NoSQL (MongoDB) databases, with a focus on relational databases."
-            tags: ["PostgreSQL", "MongoDB", "Database Design"]
-            icon: "🗄️"
+          - name: "Portfolio Website"
+            description: "Personal website built with Rails + Tailwind, deployed on Fly.io with integrated email system via SMTP. Demonstrates fullstack end-to-end capability."
+            tags: ["Ruby on Rails", "Tailwind CSS", "Fly.io", "SMTP"]
+            icon: "🌟"
+            link: "https://crowrojas.dev"
 
   skills:
     title: "Skills"
@@ -166,6 +165,34 @@ en:
           - name: "Node.js"
             level: 80
             icon: "📦"
+          - name: "React"
+            level: 80
+            icon: "⚛️"
+
+      technologies:
+        title: "Technologies & Tools"
+        skills:
+          - name: "PostgreSQL"
+            icon: "🐘"
+            description: "Primary database for production applications"
+          - name: "Redis"
+            icon: "🔴"
+            description: "Caching and background jobs"
+          - name: "Docker"
+            icon: "🐳"
+            description: "Containerization and deployment"
+          - name: "Git"
+            icon: "🌿"
+            description: "Version control"
+          - name: "CI/CD"
+            icon: "🔄"
+            description: "Jenkins, GitHub Actions"
+          - name: "RSpec/Minitest"
+            icon: "✅"
+            description: "Testing frameworks"
+          - name: "Tailwind CSS"
+            icon: "🎨"
+            description: "Frontend styling"
 
       languages:
         title: "Languages"
@@ -183,46 +210,26 @@ en:
     roles:
       notion:
         company: "Notion"
-        title: "Campus Leader"
+        title: "Former Campus Leader"
         period: "September 2024 - Present"
         location: "Santiago Metropolitan Region, Chile"
         description: "I lead workshops and build a supportive community, helping students master Notion. My role includes facilitating training sessions, creating resources, and providing one-on-one support to enhance productivity and organization on campus."
 
       buk:
-        company: "Buk"
+        company: "Buk - HR Platform"
         roles:
-          - title: "Semi Senior Software Engineer"
-            period: "July 2024 - Present"
-            location: "Santiago Metropolitan Region, Chile"
-            description: "Semi Senior (Level 2) Software Engineer in the Platform team, mainly responsible for maintaining and improving the developer experience and the core pillars of Buk's application."
-
-          - title: "Software Engineer"
-            period: "March 2023 - July 2024"
-            location: "Santiago Metropolitan Region, Chile"
-            description: "Working on the Framework team, developing tools and solutions for Buk's developers."
-
-          - title: "Professional Intern"
-            period: "January 2023 - March 2023"
-            location: "Santiago Metropolitan Region, Chile"
-            description: "Development intern at Buk."
+          - title: "Software Engineer II"
+            period: "January 2023 - Present (nearly 3 years)"
+            location: "Santiago, Chile"
+            description: "Started as an intern and grew to Semi-Senior level (Level II) on the Platform team, responsible for core building blocks that support Buk's entire application and are used by multiple product teams. Currently part of the Users and Profiles team, in charge of user access and permissions. Also serve as instructor for new developer onboarding."
 
       puc:
         company: "Pontificia Universidad Católica de Chile"
         roles:
-          - title: "Head Teaching Assistant - Automata Theory"
-            period: "July 2024 - Present"
+          - title: "Teaching Assistant & University Tutor"
+            period: "2020 - 2024"
             location: "Santiago, Chile"
-            description: "Course coordinator for PUC's Automata Theory, responsible for organizing the teaching assistant team, overseeing homework and test corrections, and ensuring excellent course operation."
-
-          - title: "Calculus I Teaching Assistant"
-            period: "March 2022 - July 2024"
-            location: "Santiago Metropolitan Region, Chile"
-            description: "Course assistant and evaluation corrector"
-
-          - title: "PIMU Calculus Tutor"
-            period: "March 2020 - July 2024"
-            location: "Santiago, Chile"
-            description: "PIMU (University Mathematics Insertion Program) tutor for Calculus courses including Precalculus, Calculus I, and Calculus II at PUC. Tutoring consists of personalized sessions with no more than 10 students where the tutor helps reinforce course material through active learning, differing from traditional teaching methods by taking an approach where students face exercises themselves, with the tutor as a guide."
+            description: "Excellence Teaching Assistant: Recognition given to 10 (out of 400+) teaching assistants for support, commitment, and dedication in math courses. Coordinator of Automata Theory course: organized teaching assistant team, supervised corrections, and managed course operations. Calculus I Teaching Assistant for 2 years: graded evaluations and supported students. PIMU Tutor: personalized sessions with active learning methodology for small student groups."
 
   education:
     title: "Education"
