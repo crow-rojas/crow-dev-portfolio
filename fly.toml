@@ -4,7 +4,7 @@
 #
 
 app = 'crow-dev-portfolio'
-primary_region = 'scl'
+primary_region = 'gru'
 console_command = '/rails/bin/rails console'
 
 [build]
